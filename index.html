@@ -36,6 +36,29 @@
             flex-direction: column;
             justify-content: center;
         }
+        .toast-message {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff4d4f; /* 🔴 Bright red */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    opacity: 0.95;
+    z-index: 1000;
+    animation: fadeOut 2s forwards;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+}
+
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
 
         .header {
             text-align: center;
@@ -478,7 +501,7 @@
                         <h1 class="title">Custom Wordle</h1>
                         <p class="subtitle">Guess the 5-letter word!</p>
                     </div>
-                    
+                     <div v-if="toastMessage" class="toast-message">{{ toastMessage }}</div>
                     <div v-if="error" class="error">{{ error }}</div>
                     
                     <div v-else class="game-container">
@@ -556,6 +579,7 @@
                 </div>
             `,
             setup() {
+                const toastMessage = ref('');
                 const targetWord = ref('');
                 const guesses = ref([]);
                 const currentGuess = ref(0);
@@ -638,20 +662,16 @@ const submitGuess = () => {
     const guess = guesses.value[currentGuess.value];
     const guessWord = guess.letters.join('').toLowerCase();
 
-    // ✅ Validate word using the dictionary
-    if (!VALID_WORDS.has(guessWord)) {
-    error.value = `"${guessWord.toUpperCase()}" is not a valid word.`;
-    setTimeout(() => {
-        error.value = '';
-    }, 2000);
+    // 🚫 Check if word is in the valid list
+   if (!VALID_WORDS.has(guessWord)) {
+    toastMessage.value = 'Not in word list';
+    setTimeout(() => (toastMessage.value = ''), 2000);
     return;
 }
 
-    // ✅ Clear error if previous guess was invalid but now is fine
-    error.value = '';
 
+    // ✅ Now proceed with valid guess
     const statuses = getLetterStatuses(guessWord.toUpperCase(), targetWord.value);
-
     guess.statuses = statuses;
     guess.submitted = true;
 
@@ -776,7 +796,8 @@ const submitGuess = () => {
                     handleKeyPress,
                     getTileClass,
                     getKeyClass,
-                    goToCreate
+                    goToCreate,
+                    toastMessage
                 };
             }
         };
