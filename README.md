@@ -7,7 +7,7 @@ A personalized Wordle experience where you can challenge your friends with your 
 <img width="1895" height="817" alt="Image" src="https://github.com/user-attachments/assets/392fec36-0cc4-4838-85e2-92596b4027d8" />
 
 
-
+<br><br>
 
 
 
