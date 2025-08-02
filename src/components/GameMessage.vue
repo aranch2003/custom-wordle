@@ -1,6 +1,8 @@
+
+
 <template>
   <Transition name="modal">
-    <div v-if="gameMessage" class="game-message-overlay" @click.self="$emit('close')">
+    <div v-if="gameMessage" class="game-message-overlay">
       <div class="game-message" :class="{ lose: gameMessage.type === 'lose' }">
         <h2>{{ gameMessage.title }}</h2>
         <p>{{ gameMessage.text }}</p>
@@ -8,10 +10,11 @@
           <button @click="$emit('new-game')" class="new-game-btn">
             Create New Game
           </button>
-          <button @click="$emit('close')" class="close-btn">
-            Close
+          
+          <button @click="$emit('play-random')" class="close-btn">
+            Play a Random Word
           </button>
-        </div>
+          </div>
       </div>
     </div>
   </Transition>
@@ -26,11 +29,13 @@ export default {
       default: null
     }
   },
-  emits: ['close', 'new-game']
+  // #### THIS ARRAY IS UPDATED ####
+  emits: ['new-game', 'play-random']
 }
 </script>
 
 <style scoped>
+/* No changes needed in the style section */
 .game-message-overlay {
   position: fixed;
   top: 0;

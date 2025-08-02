@@ -1,5 +1,67 @@
-# Vue 3 + Vite
+🎨 Custom Wordle
+A personalized Wordle experience where you can challenge your friends with your own secret words or jump straight into a random puzzle. This project was built with Vue 3 and Vite, focusing on a clean UI and a reactive, component-based architecture.
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+### [➡️ Live Demo](https://wordleforever.netlify.app/#/)
+
+<img width="1895" height="817" alt="Image" src="https://github.com/user-attachments/assets/392fec36-0cc4-4838-85e2-92596b4027d8" />
+
+<img width="909" height="851" alt="Image" src="https://github.com/user-attachments/assets/a7f3e317-3ef5-4c20-807d-2d968c8af9ba" />
+
+<img width="643" height="837" alt="Image" src="https://github.com/user-attachments/assets/57649627-5979-4e0a-9c7a-3cfb5c244605" />
+
+<img width="644" height="852" alt="Image" src="https://github.com/user-attachments/assets/3bbff942-2f03-4771-83cc-6867ef8eb45f" />
+
+<img width="874" height="847" alt="Image" src="https://github.com/user-attachments/assets/41c5b36f-9c39-4237-96b4-e72cc459914e" />
+
+✨ Features
+Custom Game Creation: Create a puzzle with any valid 5-letter word.
+
+Personalization: Add your name to the challenge to show your friends who made the puzzle.
+
+Shareable Links: The app generates a unique, encoded link for each custom game, ready to be shared.
+
+Random Play Mode: Don't feel like creating? Instantly play a random word from the dictionary.
+
+Classic Gameplay: Enjoy the familiar Wordle gameplay with a 6-try limit and color-coded feedback.
+
+Responsive Design: A clean, dark-themed UI that works beautifully on both desktop and mobile devices.
+
+Built-in Rules: An integrated "How to Play" section for new users.
+
+🚀 Tech Stack
+Framework: Vue 3 (using Composition API and <script setup>)
+
+Build Tool: Vite
+
+Routing: Vue Router
+
+Styling: Custom CSS with a focus on modern design principles like Flexbox.
+
+🛠️ How to Run Locally
+To get a local copy up and running, follow these simple steps.
+
+Clone the repository
+
+Bash
+
+git clone https://github.com/aranch2003/your-repo-name.git
+Navigate to the project directory
+
+Bash
+
+cd your-repo-name
+Install NPM packages
+
+Bash
+
+npm install
+Start the development server
+
+Bash
+
+npm run dev
+Your project will be running at http://localhost:5173/.
+
+👤 About the Author
+This project was created by aranch2003 as part of a project-based learning journey to master Vue 3.
