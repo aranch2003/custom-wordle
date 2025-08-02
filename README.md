@@ -6,13 +6,17 @@ A personalized Wordle experience where you can challenge your friends with your 
 
 <img width="1895" height="817" alt="Image" src="https://github.com/user-attachments/assets/392fec36-0cc4-4838-85e2-92596b4027d8" />
 
+
+
+
+
+
+
+
+
 <img width="909" height="851" alt="Image" src="https://github.com/user-attachments/assets/a7f3e317-3ef5-4c20-807d-2d968c8af9ba" />
 
-<img width="643" height="837" alt="Image" src="https://github.com/user-attachments/assets/57649627-5979-4e0a-9c7a-3cfb5c244605" />
 
-<img width="644" height="852" alt="Image" src="https://github.com/user-attachments/assets/3bbff942-2f03-4771-83cc-6867ef8eb45f" />
-
-<img width="874" height="847" alt="Image" src="https://github.com/user-attachments/assets/41c5b36f-9c39-4237-96b4-e72cc459914e" />
 
 ✨ Features
 Custom Game Creation: Create a puzzle with any valid 5-letter word.
@@ -63,5 +67,3 @@ Bash
 npm run dev
 Your project will be running at http://localhost:5173/.
 
-👤 About the Author
-This project was created by aranch2003 as part of a project-based learning journey to master Vue 3.
